@@ -37,4 +37,5 @@ app.post('/inscrever', (req, res) => {
     res.json({ message: 'Sucesso' });
 });
 
-app.listen(3001, () => console.log('Servidor rodando na 3001'));
+const port = process.env.PORT || 3001;
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));
