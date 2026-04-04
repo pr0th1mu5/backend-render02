@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const API_URL = "https://backend-render02.onrender.com"; // <--- ATUALIZE AQUI
+
+// A linha abaixo serve apenas para testes locais sem gravar as informações no arquivo do servidor remoto (render.com)
+//const API_URL = "http://localhost:3001";
+
 const AGENDA = [
   { dia: "Segunda", data: "06/04" }, { dia: "Terça", data: "07/04" },
   { dia: "Quarta", data: "08/04" }, { dia: "Quinta", data: "09/04" }, { dia: "Sexta", data: "10/04" }
