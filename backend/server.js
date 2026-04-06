@@ -28,41 +28,53 @@ app.get('/status', (req, res) => {
 });
 
 app.post('/inscrever', (req, res) => {
+   
+    const nodemailer = require('nodemailer');
+
+// 1. Configure o seu transportador (Use o Gmail como exemplo)
+// DICA: Para o Gmail, você precisará gerar uma "Senha de App" nas configurações de segurança da sua conta Google.
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'clecioufpi@gmail.com', // Coloque seu e-mail aqui
+    pass: 'nchl rnzo ybma owsm'   // Coloque a Senha de App de 16 dígitos aqui
+  }
+});
+
+app.post('/inscrever', (req, res) => {
     const { nome, email, whats, cpf, data, turno, vaga } = req.body;
-    
-    // Lemos o conteúdo atualizado AGORA para validar
     const content = fs.existsSync(FILE_PATH) ? fs.readFileSync(FILE_PATH, 'utf-8') : '';
 
-    // 1. VALIDAÇÃO DE CPF ÚNICO
     if (content.includes(`| ${cpf} |`)) {
-        return res.status(400).json({ message: 'Este CPF já possui uma reserva ativa!' });
+        return res.status(400).json({ message: 'Este CPF já possui reserva!' });
     }
 
-    // 2. VALIDAÇÃO DE VAGA ESPECÍFICA
-    if (content.includes(`| ${data} | ${turno} | ${vaga}`)) {
-        return res.status(400).json({ message: 'Esta vaga acabou de ser ocupada!' });
-    }
-
-    // 3. VALIDAÇÃO DE FORMATO
-    if (!cpf || cpf.length !== 14) {
-        return res.status(400).json({ message: 'CPF inválido.' });
-    }
-
-    // Gravação dos dados - GARANTINDO O FORMATO TEXTO (utf-8)
     const novaLinha = `${new Date().toLocaleString()} | ${nome} | ${cpf} | ${email} | ${whats} | ${data} | ${turno} | ${vaga}\n`;
-    
+
     try {
-        // Substitua a linha do fs.appendFileSync por esta:
-fs.appendFile(FILE_PATH, novaLinha, 'utf8', (err) => {
-    if (err) console.log("ERRO REAL AO GRAVAR:", err);
-    else console.log("GRAVADO NO DISCO!");
-});
-        console.log("Salvo com sucesso no arquivo!");
+        // Grava no arquivo (mesmo que seja temporário)
+        fs.appendFileSync(FILE_PATH, novaLinha, 'utf-8');
+        
+        // --- ENVIO DO E-MAIL DE BACKUP ---
+        const mailOptions = {
+          from: 'clecioufpi@gmail.com',
+          to: 'clecioufpi@gmail.com', // Você recebe no seu próprio e-mail
+          subject: `Nova Inscrição: ${nome}`,
+          text: `Dados da Inscrição:\n\n${novaLinha}`
+        };
+
+        transporter.sendMail(mailOptions, (error, info) => {
+          if (error) console.log("Erro ao enviar e-mail:", error);
+          else console.log("E-mail de backup enviado: " + info.response);
+        });
+        // ---------------------------------
+
         res.json({ message: 'Sucesso' });
     } catch (err) {
-        console.error("Erro ao gravar no arquivo:", err);
-        res.status(500).json({ message: 'Erro ao salvar no servidor.' });
+        res.status(500).json({ message: 'Erro no servidor' });
     }
+});
+
 });
 
 // ROTA DE BACKUP
