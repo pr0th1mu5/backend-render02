@@ -28,3 +28,17 @@
 4/6/2026, 1:14:40 AM | Eduardo Costa Carvalho | 988.163.733-34 | eduardocostacarvalho@icloud.com | 86994739339 | 08/04 | Tarde | Vaga 4
 4/6/2026, 1:14:42 AM | José Carlos de Souza Júnior | 698.651.751-34 | josecarlos.unb@gmail.com | 69999344321 | 06/04 | Tarde | Vaga 5
 4/6/2026, 1:15:00 AM | Laraele Tersalha | 000.000.000-00 | laraeletersalha@gmail.com | 86999274166 | 09/04 | Tarde | Vaga 2
+4/6/2026, 11:26:06 AM | Weslley Emmanuel Martins Lima | 622.691.513-72 | weslleylima@gmail.com | 86988041949 | 10/04 | Tarde | Vaga 2
+4/6/2026, 11:33:23 AM | Robert Eduardo Serejo Soares | 810.178.393-87 | robert.serejo2@gmail.com | 86981938413 | 09/04 | Tarde | Vaga 4
+4/6/2026, 11:33:47 AM | Raimundo Julio Pessoa  | 041.028.073-90 | trabalhecomjuliopessoa@gmail.com | 86994154444 | 06/04 | Tarde | Vaga 6
+4/6/2026, 11:39:00 AM | Marsandro Henrique dos Santos Costa | 041.119.493-39 | marsandrohenrique@hotmail.com | 86988249270 | 08/04 | Manhã | Vaga 6
+4/6/2026, 11:41:12 AM | Marxos Aurélio Silveira Nascimento  | 662.195.583-91 | marcosaurelio1109@hotmail.com | 86 99861 9499  | 08/04 | Tarde | Vaga 6
+4/6/2026, 11:43:03 AM | Gabriel Jandaia de Sousa Silva  | 071.563.353-83 | gabrieljandaiaprofissional@gmail.com | 86988175560 | 10/04 | Tarde | Vaga 5
+4/6/2026, 11:46:28 AM | Ayrton Henrique Queiroz Silva | 033.299.083-43 | ayrton.henrique@gmail.com | 86994985598 | 10/04 | Tarde | Vaga 3
+4/6/2026, 11:48:21 AM | Dyogo Pascoal De Sousa Carvalho | 031.147.993-61 | dyogopascoal5@gmail.com | 86988427212 | 10/04 | Tarde | Vaga 4
+4/6/2026, 11:51:32 AM | Felipe Daniel Bastos Lopes  | 065.914.633-99 | f.d.felipe.daniel.lopes@gmail.com | 86981663808 | 10/04 | Manhã | Vaga 4
+4/6/2026, 11:56:04 AM | José cledinaldo dos Santos Guerra  | 631.940.233-49 | drnaldoguerra22@gmail.com | 99981012727 | 10/04 | Manhã | Vaga 3
+4/6/2026, 12:01:42 PM | Aylon da Silva Correia  | 042.507.173-13 | aylon9191@gmail.com | +55 85 8904-5715 | 07/04 | Tarde | Vaga 2
+4/6/2026, 12:04:30 PM | Erick Barros Barros Araújo | 770.265.193-87 | erickbaluz@gmail.com | 86999811981 | 09/04 | Tarde | Vaga 3
+4/6/2026, 12:17:38 PM | Yasmin Dantas Avelino Nogueira | 015.012.973-41 | yasmindnogueira@gmail.com | 86 999242272 | 07/04 | Tarde | Vaga 3
+4/6/2026, 12:30:01 PM | Lucas bronney Silva Oliveira  | 045.720.493-19 | luks_bronney@hotmail.com | 86 98885-2357  | 09/04 | Manhã | Vaga 4
